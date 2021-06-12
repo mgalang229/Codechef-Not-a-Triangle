@@ -21,7 +21,7 @@ int main() {
 		// start the for-loop in the last element until the 2nd element
 		for (int i = n - 1; i >= 2; i--) {
 			// for every current element, we perform a binary search to find the
-			// the number of ways a that the sum of two values are STRICLY less
+			// the number of ways that the sum of two values are STRICLY less
 			// than the value of the current element being iterated upon
 			// 1st addend: start from the next value before the current value 
 			// (adjacent that is smaller)
@@ -30,8 +30,8 @@ int main() {
 			int k = 0;
 			// run a while-loop until 'k' is greater than or equal to 'j'
 			while (k < j) {
-				// check if the sum of the 1st and 2nd addends is STRICTLY less than or
-				// equal to the current element being iterated upon
+				// check if the sum of the 1st and 2nd addends is STRICTLY less than
+				// the current element being iterated upon
 				if (l[k] + l[j] < l[i]) {
 					// if yes, then count the number of elements between them (number of ways)
 					// because any value before the 1st addend that is added to the 2nd addend
@@ -42,8 +42,8 @@ int main() {
 				} else {
 					// otherwise, if the sum of the 1st and 2nd addends is greater than or equal to
 					// the current element being iterated upon, then we need to lower the search, so
-					// that's why 'j' needs to be decremented to until we find the 1st addend that
-					// can be form a sum with the 2nd addend which is less than the current element
+					// that's why 'j' needs to be decremented until we find the 1st addend that
+					// can form a sum with the 2nd addend which is less than the current element
 					// being iterated upon (if it exists)
 					j--;
 				}
